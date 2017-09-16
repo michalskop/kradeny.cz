@@ -1,0 +1,2 @@
+# kradeny.cz
+Kradeny.cz
