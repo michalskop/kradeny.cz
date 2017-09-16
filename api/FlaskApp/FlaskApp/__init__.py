@@ -35,7 +35,7 @@ def upload():
     # return jsonify({"name": f.filename})
     filename = '/tmp/' + secure_filename(f.filename)
     f.save(filename)
-    return jsonify({"filename": f.filename})
+    return jsonify({"filename": filename})
 
 
 @app.route("/recognize/")
