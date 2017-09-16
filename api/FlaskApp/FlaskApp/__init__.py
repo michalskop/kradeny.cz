@@ -35,7 +35,6 @@ def upload():
     # return jsonify({"name": f.filename})
     filename = '/tmp/' + secure_filename(f.filename)
     f.save(filename)
-    proc = subprocess(["/usr/bin/mogrify", "-resize", "640", filename])
     return jsonify({"filename": filename})
 
 
@@ -44,6 +43,7 @@ def upload():
 def recognize():
     try:
         filename = request.args.get('filename', '')
+        proc1 = subprocess(["/usr/bin/mogrify", "-resize", "640", filename], stdout=subprocess.PIPE)
         proc = subprocess.Popen(["/usr/bin/alpr", "-c eu", "-n 8", "-j", filename], stdout=subprocess.PIPE)
         output = json.loads(proc.stdout.read().decode("utf-8"))
         return jsonify({'value': 'ok', 'output': output})
