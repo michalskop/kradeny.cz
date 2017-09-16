@@ -20,7 +20,7 @@ def check(spz):
 
     r = requests.post(url, headers=headers, data=data)
 
-    pattern = " Druh"
+    pattern = "Druh"
     try:
         m = re.search(pattern, r.text)
         try:
