@@ -11,7 +11,7 @@ sudo apt-get update && sudo apt-get install -y openalpr openalpr-daemon openalpr
 ```
 sudo apt-get install libapache2-mod-wsgi python-dev
 sudo a2enmod wsgi
-ln -s /home/projects/kradeny.cz/api/FlaskApp/ /var/www/api.kradeny.skop.eu
+sudo ln -s /home/projects/kradeny.cz/api/FlaskApp/ /var/www/api.kradeny.skop.eu
 sudo nano /etc/apache2/sites-available/api.kradeny.skop.eu.conf
 sudo a2ensite api.kradeny.skop.eu
 sudo service apache2 reload
