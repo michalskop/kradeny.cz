@@ -44,7 +44,7 @@ def recognize():
     try:
         filename = request.args.get('filename', '')
         proc1 = subprocess(["/usr/bin/mogrify", "-resize", "640", filename], stdout=subprocess.PIPE)
-        proc = subprocess.Popen(["/usr/bin/alpr", "-c eu", "-n 8", "-j", filename], stdout=subprocess.PIPE)
+        proc = subprocess.Popen(["/usr/bin/alpr", "-c eu", "-n 8", "-j"], stdin=p1.stdout, stdout=subprocess.PIPE)
         output = json.loads(proc.stdout.read().decode("utf-8"))
         return jsonify({'value': 'ok', 'output': output})
     except Exception:
