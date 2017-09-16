@@ -19,7 +19,7 @@ sudo service apache2 reload
 
 *TODO: Apache conf, first line (WSGIPythonPath), probably should not be used, but could not get it run otherwise*
 
-### Venv
+### Venv + Flask
 ```
 sudo apt-get install python3-venv
 cd /home/projects/kradeny.cz/api/FlaskApp/FlaskApp/
@@ -30,9 +30,9 @@ cp /home/projects/kradeny.cz/activate_this.py /home/projects/kradeny.cz/api/Flas
 
 ```
 
-### Flask
+### App
 ```
-
-
+cd .....
+npm insall
 
 ```

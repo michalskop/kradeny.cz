@@ -35,6 +35,7 @@ def upload():
     # return jsonify({"name": f.filename})
     filename = '/tmp/' + secure_filename(f.filename)
     f.save(filename)
+    proc = subprocess(["/usr/bin/mogrify", "-resize", "640", filename])
     return jsonify({"filename": filename})
 
 
