@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import re
 import requests
 
@@ -17,7 +16,7 @@ def check(spz):
     }
 
     url = "http://aplikace.policie.cz/patrani-vozidla/default.aspx"
-
+#    return {'a':'a'}
     r = requests.post(url, headers=headers, data=data)
 
     pattern = "Druh"
