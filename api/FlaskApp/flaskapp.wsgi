@@ -7,7 +7,7 @@ with open(activate_this) as file_:
 import sys
 import logging
 logging.basicConfig(stream=sys.stderr)
-sys.path.insert(0,"/var/www/api.kradeny.cz/")
+sys.path.insert(0,"/var/www/api.kradeny.skop.eu/")
 
 from FlaskApp import app as application
 application.secret_key = 'Add your secret key'
