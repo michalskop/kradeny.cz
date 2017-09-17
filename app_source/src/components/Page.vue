@@ -227,7 +227,7 @@
         position: absolute;
         bottom: 1em;
         font-size: 3em;
-        padding: .25em 1em;
+        /*padding: .25em 1em;*/
         font-weight: bold;
     }
     .appIcon img {
